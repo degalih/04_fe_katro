@@ -1,0 +1,422 @@
+/* Reset */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Font */
+/* Variable Color Pallete */
+/* Basic Style */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 660px) {
+  .container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+/* Navbar */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  background-color: white;
+}
+
+@media screen and (max-width: 300px) {
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+header .logo {
+  margin-right: auto;
+}
+
+header .logo img {
+  height: 56px;
+}
+
+@media screen and (max-width: 300px) {
+  header .logo {
+    display: none;
+  }
+}
+
+header .logo-only img {
+  height: 56px;
+}
+
+@media screen and (min-width: 300px) {
+  header .logo-only {
+    display: none;
+  }
+}
+
+.nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-weight: 600;
+  color: #a0583c;
+  text-transform: uppercase;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  background: #c08267;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: white;
+}
+
+.cta {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #ccb9b1;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: #616063;
+}
+
+/* Mobile Nav */
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #ccb9b1;
+  overflow-x: hidden;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #616063;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+/* Akhir Navbar */
+/* Jumbotron */
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-image: url("../../public/images/hero-image.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 15px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 5px;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+@media screen and (max-width: 430px) {
+  .hero__title {
+    font-size: 24px;
+  }
+}
+
+.hero__tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 430px) {
+  .hero__tagline {
+    font-size: 14px;
+  }
+}
+
+/* Akhir Jumbotron */
+/* Heading Section */
+.section-title {
+  margin-top: 20px;
+}
+
+.section-title h2 {
+  position: relative;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+  color: #c08267;
+}
+
+.section-title .container ::after {
+  content: "";
+  display: block;
+  margin: 20px auto 15px -40px;
+  width: 106px;
+  border-bottom: 4px solid #212123;
+}
+
+/* Akhir */
+/* Daftar Restoran */
+main {
+  padding: 20px;
+}
+
+.cards {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.cards .card {
+  background-color: #eeeeee;
+  border-radius: 15px;
+}
+
+.card__img {
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-radius: 15px;
+}
+
+.card__img img {
+  border-radius: 15px;
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.card__content {
+  border-radius: 15px;
+  line-height: 1.5;
+  font-size: 0.9em;
+  padding: 15px;
+}
+
+.card__content h3 {
+  color: #a0583c;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+}
+
+.card__content > p:first-of-type {
+  margin-top: 0;
+}
+
+.card__content > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.card__info {
+  border-radius: 15px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: whitesmoke;
+  background-color: #a0583c;
+  font-size: 0.8em;
+}
+
+.card__info i {
+  font-size: 0.9em;
+  margin-right: 8px;
+}
+
+/* Akhir Daftar Restoran*/
+/* Location */
+.google-map-wrapper {
+  margin: 0 auto;
+  max-width: 1170px;
+  border: 2px solid #c08267;
+}
+
+.google-map-wrapper .container {
+  padding: 0;
+}
+
+.google-map-wrapper .container .googlemap {
+  width: 100%;
+}
+
+/* Akhir Location */
+/* Footer */
+footer {
+  background-color: #ccb9b1;
+  height: 230px;
+}
+
+footer .container {
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+footer .footer__logo {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+footer .footer__logo img {
+  max-width: 150px;
+}
+
+@media only screen and (max-width: 300px) {
+  footer .footer__logo img {
+    width: 100%;
+  }
+}
+
+footer .footer__caption p {
+  color: #a0583c;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+}
+
+/* Akhir Footer */
