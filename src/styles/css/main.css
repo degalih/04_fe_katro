@@ -16,6 +16,21 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Skip Konten */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #c08267;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .container {
   margin: 0;
   padding: 0;
@@ -81,14 +96,25 @@ header .logo-only img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nav__links a,
 .cta,
 .overlay__content a {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+  border-radius: 25px;
   font-weight: 600;
   color: #a0583c;
   text-transform: uppercase;
+  padding: 15px 15px;
 }
 
 .nav__links li {
@@ -108,11 +134,8 @@ header .logo-only img {
 }
 
 .cta {
-  margin-left: 20px;
-  padding: 9px 25px;
   background-color: #ccb9b1;
   border: none;
-  border-radius: 50px;
   cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -301,6 +324,8 @@ main {
 .cards .card {
   background-color: #eeeeee;
   border-radius: 15px;
+  display: -ms-grid;
+  display: grid;
 }
 
 .card__img {
@@ -356,6 +381,9 @@ main {
   color: whitesmoke;
   background-color: #a0583c;
   font-size: 0.8em;
+  max-height: 45px;
+  -ms-flex-item-align: end;
+      align-self: end;
 }
 
 .card__info i {

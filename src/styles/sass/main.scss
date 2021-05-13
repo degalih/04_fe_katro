@@ -22,6 +22,21 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Skip Konten */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: $coklat-muda;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .container {
   margin: 0;
   padding: 0;
@@ -66,14 +81,21 @@ header {
 
 .nav__links {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav__links a,
 .cta,
 .overlay__content a {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+  border-radius: 25px;
   font-weight: 600;
   color: $coklat-tua;
   text-transform: uppercase;
+  padding: 15px 15px;
 }
 
 .nav__links li {
@@ -91,11 +113,8 @@ header {
 }
 
 .cta {
-  margin-left: 20px;
-  padding: 9px 25px;
   background-color: $cream;
   border: none;
-  border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
@@ -260,6 +279,7 @@ main {
   .card {
     background-color: #eeeeee;
     border-radius: 15px;
+    display: grid;
   }
 }
 
@@ -307,6 +327,8 @@ main {
   color: whitesmoke;
   background-color: $coklat-tua;
   font-size: 0.8em;
+  max-height: 45px;
+  align-self: end;
 }
 
 .card__info i {
