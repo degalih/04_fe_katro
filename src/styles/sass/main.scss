@@ -20,12 +20,19 @@ $coklat-tua: #a0583c;
 /* Basic Style */
 body {
   font-family: "Montserrat", sans-serif;
+  a {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+    text-decoration: none;
+    color: $coklat-tua;
+  }
 }
 
 /* Skip Konten */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -45px;
   left: 0;
   background-color: $coklat-muda;
   color: white;
@@ -306,7 +313,6 @@ main {
     color: $coklat-tua;
     font-weight: 600;
     font-size: 18px;
-    margin: 10px 0 15px 0;
   }
 }
 

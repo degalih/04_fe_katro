@@ -16,10 +16,18 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+body a {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  text-decoration: none;
+  color: #a0583c;
+}
+
 /* Skip Konten */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -45px;
   left: 0;
   background-color: #c08267;
   color: white;
@@ -355,7 +363,6 @@ main {
   color: #a0583c;
   font-weight: 600;
   font-size: 18px;
-  margin: 10px 0 15px 0;
 }
 
 .card__content > p:first-of-type {
