@@ -1,10 +1,11 @@
 /* font */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800&display=swap');
 
 /* css variables */
 :root {
   --primary-color: #a0583c;
-  --secondary-color: #edf0f1;
+  --secondary-color: #c08267;
+  --tertiary-color: #edf0f1;
 }
 
 /* Reset */
@@ -19,7 +20,7 @@
 
 /* Basic Style */
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body a {
@@ -27,5 +28,5 @@ body a {
   min-width: 44px;
   min-height: 44px;
   text-decoration: none;
-  color: #a0583c;
+  color: var(--primary-color);
 }

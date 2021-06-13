@@ -18,7 +18,6 @@
   padding: 0;
 }
 
-/* Navbar */
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,144 +32,76 @@ header {
   background-color: white;
 }
 
-header .logo {
-  margin-right: auto;
-}
-
-header .logo img {
+.logo img {
   height: 56px;
 }
 
-header .logo-only {
+.logo-only {
   display: none;
 }
 
-header .logo-only img {
+.logo-only img {
   height: 56px;
 }
 
-.nav__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
+/* AppBar */
 
-.nav__links a,
-.cta,
-.overlay__content a {
-  min-width: 44px;
-  min-height: 44px;
-  display: inline-block;
-  border-radius: 25px;
-  font-weight: 600;
-  color: #a0583c;
-  text-transform: uppercase;
-  padding: 15px 15px;
-}
-
-.overlay__content a {
-  color: #edf0f1;
-}
-.nav__links li {
-  padding: 0px 20px;
-}
-
-.nav__links li a {
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.nav__links li a:hover {
-  background: #c08267;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  color: white;
-}
-
-.cta {
-  background-color: #c08267;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.active a {
-  color: #edf0f1;
-}
-
-.cta:hover {
-  background-color: #616063;
-}
-
-/* Mobile Nav */
-.menu {
-  display: none;
-}
-
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0;
+.app-bar {
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  position: sticky;
   top: 0;
-  background-color: #ccb9b1;
-  overflow-x: hidden;
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  z-index: 99;
 }
 
-.overlay--active {
-  width: 100%;
-}
-
-.overlay__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.app-bar .app-bar__menu {
   display: flex;
-  height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
-.overlay a {
-  padding: 15px;
-  font-size: 36px;
-  display: block;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.overlay a:hover,
-.overlay a:focus {
-  color: #616063;
-}
-
-.overlay .close {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-  color: #edf0f1;
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
   cursor: pointer;
 }
 
-/* Akhir Navbar */
+.fa-bars {
+  color: var(--primary-color);
+}
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 70px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  background-color: white;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-weight: 600;
+}
+
+/* Akhir Appbar */
+
 /* Jumbotron */
 .hero {
   display: -webkit-box;
@@ -182,7 +113,7 @@ header .logo-only img {
   min-height: 380px;
   width: 100%;
   text-align: center;
-  background-image: url("../../public/images/hero-image.jpg");
+  background-image: url('../../public/images/hero-image.jpg');
   background-size: cover;
   background-position: center center;
 }
@@ -224,11 +155,11 @@ header .logo-only img {
 }
 
 .section-title .container ::after {
-  content: "";
+  content: '';
   display: block;
   margin: 20px auto 15px -40px;
   width: 106px;
-  border-bottom: 4px solid #212123;
+  border-bottom: 4px solid var(--primary-color);
 }
 
 /* Akhir */
@@ -253,7 +184,7 @@ main {
 }
 
 .cards .card {
-  background-color: #eeeeee;
+  background-color: var(--tertiary-color);
   border-radius: 15px;
   display: -ms-grid;
   display: grid;
@@ -283,7 +214,7 @@ main {
 }
 
 .card__content h3 {
-  color: #a0583c;
+  color: var(--secondary-color);
   font-weight: 600;
   font-size: 18px;
 }
@@ -308,8 +239,8 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: whitesmoke;
-  background-color: #a0583c;
+  color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   font-size: 0.8em;
   max-height: 45px;
   -ms-flex-item-align: end;
@@ -322,25 +253,10 @@ main {
 }
 
 /* Akhir Daftar Restoran*/
-/* Location */
-.google-map-wrapper {
-  margin: 0 auto;
-  max-width: 1170px;
-  border: 2px solid #c08267;
-}
 
-.google-map-wrapper .container {
-  padding: 0;
-}
-
-.google-map-wrapper .container .googlemap {
-  width: 100%;
-}
-
-/* Akhir Location */
 /* Footer */
 footer {
-  background-color: #ccb9b1;
+  background-color: var(--secondary-color);
   height: 230px;
 }
 
@@ -364,7 +280,7 @@ footer .footer__logo img {
 }
 
 footer .footer__caption p {
-  color: #edf0f1;
+  color: var(--tertiary-color);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
