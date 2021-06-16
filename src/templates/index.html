@@ -3,10 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Galih Muhammad Ramdan | galihmramdan17@gmail.com" />
-    <link rel="icon" href="./images/collega-favicon.PNG" type="favicon" sizes="16x16" />
+    <meta
+      name="author"
+      content="Galih Muhammad Ramdan | galihmramdan17@gmail.com"
+    />
+    <meta
+      name="description"
+      content="Website yang menampilkan katalog restoran dengan pendekatan PWA"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#a0583c" />
+    <link
+      rel="icon"
+      href="./images/collega-favicon.PNG"
+      type="favicon"
+      sizes="16x16"
+    />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     <title>Collega Cafe & Resto</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!-- Skip link -->
@@ -16,17 +36,28 @@
     <div class="container">
       <header class="app-bar">
         <div class="app-bar__menu">
-          <button id="hamburgerButton"><i class="fas fa-bars fa-2x"></i></button>
+          <button id="hamburgerButton">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
         </div>
         <div class="app-bar__brand">
-          <a class="logo" href="/"><img src="./images/logo-color.svg" alt="logo" /></a>
-          <a class="logo-only" href="/"><img src="./images/logo-only.png" alt="logo-only" /></a>
+          <a class="logo" href="/"
+            ><img src="./images/logo-color.svg" alt="logo"
+          /></a>
+          <a class="logo-only" href="/"
+            ><img src="./images/logo-only.png" alt="logo-only"
+          /></a>
         </div>
         <nav id="navigationDrawer" class="app-bar__navigation">
           <ul>
             <li><a href="#/home">Home</a></li>
-            <li><a href="#/favorite">Favorite</a></ali>
-            <li><a href="https://www.linkedin.com/in/galih-muhammad-ramdan-a71387142/">About</a></li>
+            <li><a href="#/favorite">Favorite</a></li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/galih-muhammad-ramdan-a71387142/"
+                >About</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
@@ -36,39 +67,20 @@
     <!-- Jumbotron -->
     <div class="hero">
       <div class="hero__inner">
-        <h1 class="hero__title">Food is not rational. Food is culture, habit, craving and identity</h1>
-        <p class="hero__tagline">“One of the very nicest things about life is the way we must regularly stop whatever it is we are doing and devote our attention to eating.”</p>
+        <h1 class="hero__title">
+          Food is not rational. Food is culture, habit, craving and identity
+        </h1>
+        <p class="hero__tagline">
+          “One of the very nicest things about life is the way we must regularly
+          stop whatever it is we are doing and devote our attention to eating.”
+        </p>
       </div>
     </div>
     <!-- Akhir Jumbotron -->
+
     <main id="mainContent">
       <!-- Daftar Restoran -->
-      <!-- <div class="container">
-        <div class="cards">
-          <div class="card">
-            <div class="card__img">
-              <img src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41" alt="Bring Your Phone Cafe" />
-            </div>
-            <div class="card__content">
-              <h3>
-                <a href="#">Bring Your Phone Cafe</a>
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
-                pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-              </p>
-            </div>
-            <div class="card__info">
-              <div><i class="fas fa-map-marker-alt"></i>Medan</div>
-              <div><i class="fas fa-star"></i>4.6</div>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </main>
-
     <footer>
       <div class="container">
         <div class="footer__logo">
