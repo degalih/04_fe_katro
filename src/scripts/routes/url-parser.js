@@ -1,6 +1,8 @@
+/* eslint-disable no-underscore-dangle */
 const UrlParser = {
   parseActiveUrlWithCombiner() {
     const url = window.location.hash.slice(1).toLowerCase();
+    // eslint-disable-next-line no-underscore-dangle
     const splitedUrl = this._urlSplitter(url);
     return this._urlCombiner(splitedUrl);
   },
@@ -21,9 +23,9 @@ const UrlParser = {
 
   _urlCombiner(splitedUrl) {
     return (
-      (splitedUrl.resource ? `/${splitedUrl.resource}` : '/') +
-      (splitedUrl.id ? '/:id' : '') +
-      (splitedUrl.verb ? `/${splitedUrl.verb}` : '')
+      (splitedUrl.resource ? `/${splitedUrl.resource}` : '/')
+      + (splitedUrl.id ? '/:id' : '')
+      + (splitedUrl.verb ? `/${splitedUrl.verb}` : '')
     );
   },
 };

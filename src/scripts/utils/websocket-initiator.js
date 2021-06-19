@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-underscore-dangle */
 import NotificationHelper from './notification-helper';
 import CONFIG from '../globals/config';
 

@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-shadow */
 import RestaurantSource from '../data/restaurant-source';
 
 const review = async (url, name, review) => {

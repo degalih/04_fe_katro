@@ -19,8 +19,8 @@ const Favorite = {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
     const restaurantsContainer = document.querySelector('#cards');
     restaurants.forEach((restaurant) => {
-      restaurantsContainer.innerHTML +=
-        createRestaurantListTemplate(restaurant);
+      restaurantsContainer.innerHTML
+        += createRestaurantListTemplate(restaurant);
     });
   },
 };
