@@ -1,0 +1,42 @@
+/* Menu Restoran */
+.menu {
+  width: 300px;
+}
+
+.menu ul {
+  position: relative;
+  background: #fff;
+}
+
+.menu ul li {
+  padding: 10px;
+  width: 100%;
+  list-style: none;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+
+.menu ul li:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  background: var(--secondary-color);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  color: var(--tertiary-color);
+  text-transform: uppercase;
+}
+
+.menu ul li span {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  background: var(--primary-color);
+  color: var(--tertiary-color);
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Akhir Menu Restoran */

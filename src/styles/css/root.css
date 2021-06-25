@@ -30,3 +30,17 @@ body a {
   text-decoration: none;
   color: var(--primary-color);
 }
+
+button {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+main {
+  padding: 20px;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+}
