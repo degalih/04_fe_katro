@@ -9,7 +9,7 @@
   min-height: 380px;
   width: 100%;
   text-align: center;
-  background-image: url('../../public/images/hero-image.jpg');
+  background-image: url('/images/hero-image-medium.png');
   background-size: cover;
   background-position: center center;
 }

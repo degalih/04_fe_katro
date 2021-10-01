@@ -13,12 +13,12 @@
     />
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#a0583c" />
-    <link
+    <!-- <link
       rel="icon"
-      href="./images/collega-favicon.PNG"
+      href="/images/collega-favicon.PNG"
       type="favicon"
       sizes="16x16"
-    />
+    /> -->
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     <title>Collega Cafe & Resto</title>
     <link
@@ -41,12 +41,28 @@
           </button>
         </div>
         <div class="app-bar__brand">
-          <a class="logo" href="/"
-            ><img src="./images/logo-color.svg" alt="logo"
-          /></a>
-          <a class="logo-only" href="/"
-            ><img src="./images/logo-only.png" alt="logo-only"
-          /></a>
+          <a class="logo" href="/">
+            <!-- <img src="../public/images/logo-color.svg" alt="logo"
+          /> -->
+            <picture>
+              <source
+                media="(max-width: 600px )"
+                srcset="./images/logo-small.png"
+              />
+              <img src="./images/logo-medium.png" alt="logo-collega" />
+            </picture>
+          </a>
+          <a class="logo-only" href="/">
+            <!-- <img src="../public/logo-only.png" alt="logo-only"
+          /> -->
+            <picture>
+              <source
+                media="(max-width: 600px )"
+                srcset="./images/logo-only-small.png"
+              />
+              <img src="./images/logo-only-medium.png" alt="logo-only" />
+            </picture>
+          </a>
         </div>
         <nav id="navigationDrawer" class="app-bar__navigation">
           <ul>
@@ -84,7 +100,14 @@
     <footer>
       <div class="container">
         <div class="footer__logo">
-          <img src="./images/logo-only.png" alt="Footer Logo" />
+          <picture>
+            <source
+              media="(max-width: 600px )"
+              srcset="./images/logo-only-small.png"
+            />
+            <img src="./images/logo-only-medium.png" alt="logo-only" />
+          </picture>
+          <!-- <img src="./images/logo-only.png" alt="Footer Logo" /> -->
         </div>
         <div class="footer__caption">
           <div class="section-title">
