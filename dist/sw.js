@@ -13,6 +13,10 @@ var serviceWorkerOption = {
     "/icons/icon-512x512.png",
     "/icons/icon-72x72.png",
     "/icons/icon-96x96.png",
+    "/images/hero-image.png",
+    "/images/logo-only.png",
+    "/images/logo.png",
+    "/images/profile.png",
     "/index.html"
   ]
 };
