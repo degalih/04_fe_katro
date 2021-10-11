@@ -37,7 +37,7 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   header {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -48,6 +48,9 @@
   }
   header .logo-only {
     display: block;
+  }
+  .hero {
+    background-image: url('/images/hero-image-small.png');
   }
   .hero__title {
     font-size: 24px;

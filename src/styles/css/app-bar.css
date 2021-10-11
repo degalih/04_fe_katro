@@ -1,0 +1,57 @@
+/* AppBar */
+
+.app-bar {
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.fa-bars {
+  color: var(--primary-color);
+}
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 70px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  background-color: white;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-weight: 600;
+}
+
+/* Akhir Appbar */

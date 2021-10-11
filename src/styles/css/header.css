@@ -1,0 +1,27 @@
+/* Header */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+}
+
+.logo img {
+  height: 56px;
+}
+
+.logo-only {
+  display: none;
+}
+
+.logo-only img {
+  height: 56px;
+}
+/* Akhir Header */
