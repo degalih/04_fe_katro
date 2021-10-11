@@ -4,7 +4,6 @@ import { createRestaurantDetailTemplate } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import review from '../../utils/review';
 import { sendDataToWebsocket } from '../../utils/websocket-initiator';
-import preload from '../templates/loading-indicator';
 
 const Detail = {
   async render() {
@@ -13,11 +12,8 @@ const Detail = {
     <div class="container">
       <h2>Detail Page</h2> </div>
   </div>
-  <div class="container">
-    <div id="loading"> </div>
-  </div>
 
-  <div onload="preload()" id="detail"> </div>
+  <div id="detail"> </div>
 
   <div id="likeButtonContainer"> </div>
 
@@ -51,55 +47,41 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-
+    const detail = await RestaurantSource.Detail(url.id);
     const detailContainer = document.querySelector('#detail');
-    const loading = document.querySelector('#loading');
+    detailContainer.innerHTML = createRestaurantDetailTemplate(detail);
 
-    detailContainer.style.display = 'none';
-    loading.innerHTML = preload();
+    /* like Button */
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      detail: {
+        id: detail.id,
+        name: detail.name,
+        description: detail.description,
+        pictureId: detail.pictureId,
+        rating: detail.rating,
+        city: detail.city,
+      },
+    });
 
-    try {
-      const detail = await RestaurantSource.Detail(url.id);
-      detailContainer.innerHTML = createRestaurantDetailTemplate(detail);
+    /* Posting Review */
+    const btnSubmitReview = document.querySelector('#submit-review');
+    const namaReview = document.querySelector('#nama-review');
+    const inputReview = document.querySelector('#input-review');
 
-      /* like Button */
-      LikeButtonInitiator.init({
-        likeButtonContainer: document.querySelector('#likeButtonContainer'),
-        detail: {
-          id: detail.id,
-          name: detail.name,
-          description: detail.description,
-          pictureId: detail.pictureId,
-          rating: detail.rating,
-          city: detail.city,
-        },
+    btnSubmitReview.addEventListener('click', async (e) => {
+      e.preventDefault();
+
+      await review(url, namaReview.value, inputReview.value);
+
+      sendDataToWebsocket({
+        name: namaReview.value,
+        review: inputReview.value,
       });
 
-      /* Posting Review */
-      const btnSubmitReview = document.querySelector('#submit-review');
-      const namaReview = document.querySelector('#nama-review');
-      const inputReview = document.querySelector('#input-review');
-
-      btnSubmitReview.addEventListener('click', async (e) => {
-        e.preventDefault();
-
-        await review(url, namaReview.value, inputReview.value);
-
-        sendDataToWebsocket({
-          name: namaReview.value,
-          review: inputReview.value,
-        });
-
-        namaReview.value = '';
-        inputReview.value = '';
-      });
-
-      detailContainer.style.display = 'block';
-      loading.style.display = 'none';
-    } catch {
-      detailContainer.style.display = 'block';
-      loading.style.display = 'none';
-    }
+      namaReview.value = '';
+      inputReview.value = '';
+    });
   },
 };
 
