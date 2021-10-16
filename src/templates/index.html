@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Galih Muhammad Ramdan | galihmramdan17@gmail.com"
+    />
+    <meta
+      name="description"
+      content="Website yang menampilkan katalog restoran dengan pendekatan PWA"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#a0583c" />
+    <!-- <link
+      rel="icon"
+      href="/images/collega-favicon.PNG"
+      type="favicon"
+      sizes="16x16"
+    /> -->
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <title>Collega Cafe & Resto</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Skip link -->
+    <a href="#mainContent" class="skip-link">Menuju ke konten</a>
+
+    <!-- Header -->
+    <div class="container">
+      <header class="app-bar">
+        <div class="app-bar__menu">
+          <button aria-label="hamburgerButton" id="hamburgerButton">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+        </div>
+        <div class="app-bar__brand">
+          <a class="logo" href="/">
+            <!-- <img src="../public/images/logo-color.svg" alt="logo"
+          /> -->
+            <picture>
+              <source
+                media="(max-width: 600px )"
+                srcset="./images/logo-small.png"
+              />
+              <img src="./images/logo-medium.png" alt="logo-collega" />
+            </picture>
+          </a>
+          <a class="logo-only" href="/">
+            <!-- <img src="../public/logo-only.png" alt="logo-only"
+          /> -->
+            <picture>
+              <source
+                media="(max-width: 600px )"
+                srcset="./images/logo-only-small.png"
+              />
+              <img src="./images/logo-only-medium.png" alt="logo-only" />
+            </picture>
+          </a>
+        </div>
+        <nav id="navigationDrawer" class="app-bar__navigation">
+          <ul>
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/favorite">Favorite</a></li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/galih-muhammad-ramdan-a71387142/"
+                >About</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <!-- Akhir Header -->
+
+    <!-- Jumbotron -->
+    <div class="hero">
+      <div class="hero__inner">
+        <h1 class="hero__title">
+          Food is not rational. Food is culture, habit, craving and identity
+        </h1>
+        <p class="hero__tagline">
+          “One of the very nicest things about life is the way we must regularly
+          stop whatever it is we are doing and devote our attention to eating.”
+        </p>
+      </div>
+    </div>
+    <!-- Akhir Jumbotron -->
+
+    <main id="mainContent">
+      <!-- Daftar Restoran -->
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer__logo">
+          <picture>
+            <source
+              media="(max-width: 600px )"
+              srcset="./images/logo-only-small.png"
+            />
+            <img src="./images/logo-only-medium.png" alt="logo-only" />
+          </picture>
+          <!-- <img src="./images/logo-only.png" alt="Footer Logo" /> -->
+        </div>
+        <div class="footer__caption">
+          <div class="section-title">
+            <p>© Copyright Collega 2021</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+/* Detail Restorn */
+.detail,
+.detail::before,
+detail::after {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.detail__wrapper {
+  width: 100%;
+  max-width: 98rem;
+  padding: 3rem 5rem;
+  background-color: #fff;
+  display: flex;
+  border-radius: 0.8rem;
+}
+
+.detail__img {
+  min-width: 35rem;
+  max-width: 35rem;
+  transform: translateX(-3rem);
+  position: relative;
+  flex: 1;
+}
+
+.detail__img::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.detail__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.8rem;
+}
+
+.detail__info ul {
+  display: block;
+  list-style: none;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 2rem;
+  padding: 0;
+}
+
+.detail__info li {
+  margin: 5px 0;
+}
+.detail__info span {
+  padding-left: 20px;
+}
+
+.detail__category li {
+  list-style: none;
+  margin: 20px 0;
+}
+.category {
+  padding: 0.3em 1em;
+  color: #eee;
+  background-color: var(--primary-color);
+
+  border: 1px solid transparent;
+  border-radius: 0 10px 0px 10px;
+}
+
+.detail__description {
+  flex: 1;
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+}
+
+/* Akhir Detail Restoran */
