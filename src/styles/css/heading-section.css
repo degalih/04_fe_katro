@@ -1,0 +1,21 @@
+/* Heading Section */
+.section-title {
+  margin-top: 20px;
+}
+
+.section-title h2 {
+  position: relative;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+  color: #c08267;
+}
+
+.section-title .container ::after {
+  content: '';
+  display: block;
+  margin: 20px auto 15px -40px;
+  width: 106px;
+  border-bottom: 4px solid var(--primary-color);
+}
+/* Akhir Heading Section*/
